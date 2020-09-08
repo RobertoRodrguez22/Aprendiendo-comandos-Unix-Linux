@@ -1,0 +1,31 @@
+Paso #1
+// Crearemos un grupo al cual vamos a llamar CASA
+
+sudo groupadd CASA
+
+Paso #2
+// Crearemos 2 usuarios
+
+sudo useradd IRIS
+sudo useradd ROBERTO
+
+Paso #3
+// Añadiremos los usuario previamente creados al grupo que creamos y llamamos CASA
+
+sudo adduser IRIS CASA
+sudo adduser ROBERTO CASA
+
+Paso #4
+// Utilizando este comando nos permite bien si los usuarios se crearon y si se añadieron al grupo al cual los agregamos
+
+cat  /etc/group
+
+Paso #5
+// Cambiaremos el nombre de grupo CASA a FAMILIA
+
+sudo groupmod -n FAMILIA CASA
+
+Paso #6
+// Para finalizar utilizaremos el comando del paso #4 para corroborar que el nombre del grupo se ha cambiado.
+cat  /etc/group
+
